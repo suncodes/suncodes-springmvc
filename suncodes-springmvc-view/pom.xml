@@ -34,6 +34,14 @@
             <artifactId>spring-context</artifactId>
             <version>${springmvc.version}</version>
         </dependency>
+
+        <!-- 有关 Jackson 依赖 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.3</version>
+        </dependency>
+
     </dependencies>
 
 
