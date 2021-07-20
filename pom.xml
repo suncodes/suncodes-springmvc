@@ -10,6 +10,7 @@
     <modules>
         <module>suncodes-springmvc-helloworld</module>
         <module>suncodes-springmvc-view</module>
+        <module>suncodes-springmvc-request</module>
     </modules>
     <packaging>pom</packaging>
 
