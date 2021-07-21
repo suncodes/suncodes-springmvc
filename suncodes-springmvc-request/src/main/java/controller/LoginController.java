@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class LoginController {
 
-    @RequestMapping("/login")
+    @RequestMapping(path = "/login2", name = "注释")
     public ModelAndView handleRequest(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)
             throws Exception {
         return new ModelAndView("/register");
