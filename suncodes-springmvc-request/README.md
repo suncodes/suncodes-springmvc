@@ -88,3 +88,62 @@ method 属性用于表示该方法支持哪些 HTTP 请求。如果省略 method
 
 ### 5. params属性
 
+params 属性用于指定请求中规定的参数
+
+```text
+param1: 表示请求必须包含名为 param1 的请求参数
+!param1: 表示请求不能包含名为 param1 的请求参数
+param1 != value1: 表示请求包含名为 param1 的请求参数，但其值不能为 value1
+{“param1=value1”, “param2”}: 请求必须包含名为 param1 和param2 的两个请求参数，且 param1 参数的值必须为 value1
+```
+
+```java
+    @RequestMapping(value = "/params", params = "type")
+    public ModelAndView f() {
+        return new ModelAndView("/params");
+    }
+```
+以上代码表示请求中必须包含 type 参数时才能执行该请求。
+
+```java
+    @RequestMapping(value = "/params1", params = "type=1")
+    public ModelAndView f1() {
+        return new ModelAndView("/params");
+    }
+```
+以上代码表示请求中必须包含 type 参数，且 type 参数为 1 时才能够执行该请求。
+
+### 6. header属性
+
+header 属性表示请求中必须包含某些指定的 header 值。
+
+@RequestMapping(value = "toUser",headers = "Referer=http://www.xxx.com") 表示请求的 header 中必须包含了指定的“Referer”请求头，以及值为“http://www.xxx.com”时，才能执行该请求。 
+
+### 7. consumers 属性
+
+consumers 属性用于指定处理请求的提交内容类型（Content-Type），例如：application/json、text/html。如 
+@RequestMapping(value = "toUser",consumes = "application/json")。
+
+```java
+    @RequestMapping(value = "/params2", consumes = "application/json")
+    public ModelAndView f2() {
+        return new ModelAndView("/params");
+    }
+
+    @RequestMapping(value = "/params3", consumes = "application/x-www-form-urlencoded")
+    public ModelAndView f3() {
+        return new ModelAndView("/params");
+    }
+```
+
+
+`特别说明`：consumers 指的是请求头中的 Content-Type 的值。
+
+### 8. produces 属性
+
+produces 属性用于指定返回的内容类型，返回的内容类型必须是 request 请求头（Accept）中所包含的类型。如 @RequestMapping(value = "toUser",produces = "application/json")。
+
+除此之外，produces 属性还可以指定返回值的编码。如 @RequestMapping(value = "toUser",produces = "application/json,charset=utf-8")，表示返回 utf-8 编码。
+
+
+
