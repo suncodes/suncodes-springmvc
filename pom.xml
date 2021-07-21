@@ -12,6 +12,7 @@
         <module>suncodes-springmvc-view</module>
         <module>suncodes-springmvc-request</module>
         <module>suncodes-springmvc-param</module>
+        <module>suncodes-springmvc-model</module>
     </modules>
     <packaging>pom</packaging>
 
