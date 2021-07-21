@@ -11,6 +11,7 @@
         <module>suncodes-springmvc-helloworld</module>
         <module>suncodes-springmvc-view</module>
         <module>suncodes-springmvc-request</module>
+        <module>suncodes-springmvc-param</module>
     </modules>
     <packaging>pom</packaging>
 
