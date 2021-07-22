@@ -11,7 +11,12 @@
     <title>Param</title>
 </head>
 <body>
-lalala
-${name}
+lalala <br/>
+name: ${name} <br/>
+string: ${string} <br/>
+user: ${user} <br/>
+model1: ${model1} <br/>
+model2: ${model2} <br/>
+model3: ${model3} <br/>
 </body>
 </html>
