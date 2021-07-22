@@ -12,6 +12,6 @@
 </head>
 <body>
 lalala
-<%=request.getAttribute("user")%>
+${name}
 </body>
 </html>

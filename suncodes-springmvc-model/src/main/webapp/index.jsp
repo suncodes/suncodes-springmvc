@@ -11,7 +11,7 @@
     <title>首页</title>
 </head>
 <body>
-<a href="${pageContext.request.contextPath }/url"> URL</a>
+<a href="${pageContext.request.contextPath }/index?name=111"> URL</a>
 
 </body>
 </html>

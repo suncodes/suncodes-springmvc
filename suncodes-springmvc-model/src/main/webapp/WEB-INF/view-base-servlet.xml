@@ -5,7 +5,8 @@
             http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--<bean class="controller.ParamController"/>-->
+    <bean class="controller.ModelAttributeController"/>
+    <bean class="controller.IndexController"/>
 
     <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.InternalResourceView" />
