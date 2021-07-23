@@ -13,5 +13,12 @@
 <body>
 <a href="${pageContext.request.contextPath }/index?name=111"> URL</a>
 
+<br/>
+<br/>
+
+<form method="post" action="${pageContext.request.contextPath }/converter">
+    输入：<input type="text" name="goods">
+</form>
+
 </body>
 </html>
