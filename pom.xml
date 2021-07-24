@@ -14,6 +14,7 @@
         <module>suncodes-springmvc-param</module>
         <module>suncodes-springmvc-model</module>
         <module>suncodes-springmvc-json</module>
+        <module>suncodes-springmvc-upload</module>
     </modules>
     <packaging>pom</packaging>
 
