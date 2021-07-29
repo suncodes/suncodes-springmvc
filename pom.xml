@@ -15,6 +15,7 @@
         <module>suncodes-springmvc-model</module>
         <module>suncodes-springmvc-json</module>
         <module>suncodes-springmvc-upload</module>
+        <module>suncodes-springmvc-handwrite</module>
     </modules>
     <packaging>pom</packaging>
 
