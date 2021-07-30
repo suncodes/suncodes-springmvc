@@ -52,7 +52,7 @@ public class ExtDispatcherServlet extends HttpServlet {
 	public void init() throws ServletException {
 		try {
 			// 1.获取当前包下所有的类
-			List<Class<?>> classes = ClassUtil.getClasses("com.itmayiedu.ext.controller");
+			List<Class<?>> classes = ClassUtil.getClasses("handwrite.ext.controller");
 			// 2.初始化当前包下所有的类,使用Java反射机制初始化对象存放在SpringMVC容器中key(beanId)-value(
 			// 当前实例对象)
 			findClassMVCBeans(classes);
@@ -122,6 +122,7 @@ public class ExtDispatcherServlet extends HttpServlet {
 	public void doDispatch(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		// 1.获取请求url地址
 		String requestUrl = req.getRequestURI();
+		requestUrl = requestUrl.replaceFirst(getServletContext().getContextPath(), "");
 		// 2.使用请求url查找对应mvc 控制器bean
 		Object object = mvcBeanUrl.get(requestUrl);
 		if (object == null) {
