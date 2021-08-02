@@ -16,6 +16,8 @@
         <module>suncodes-springmvc-json</module>
         <module>suncodes-springmvc-upload</module>
         <module>suncodes-springmvc-handwrite</module>
+        <module>suncodes-struts2-helloworld</module>
+        <module>suncodes-struts2-action</module>
     </modules>
     <packaging>pom</packaging>
 
